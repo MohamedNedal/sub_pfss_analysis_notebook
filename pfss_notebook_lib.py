@@ -1055,11 +1055,13 @@ def symlog_pspiral(sw, distance, longitude, latitude, hmimap, names=None, title=
         plt.savefig('testfig.png', transparent=False, facecolor='white', bbox_inches='tight')
 
     # if using streamlit, send plot to streamlit output, else call plt.show()
-    if _isstreamlit():
-        import streamlit as st
-        st.pyplot(fig)  # , dpi=200)
-    else:
-        plt.show()
+    # if _isstreamlit():
+    #     import streamlit as st
+    #     st.pyplot(fig)  # , dpi=200)
+    # else:
+    #     plt.show()
+    # NOT WORKING WITH STREAMLIT 1.9.0! For now and here, just do it manually:
+    st.pyplot(fig)
 
     # the function returns all the calculated field line objects, which include many attributes
     # of the field lines such as coordinates, polarity, and wether they are open or closed
