@@ -1061,6 +1061,7 @@ def symlog_pspiral(sw, distance, longitude, latitude, hmimap, names=None, title=
     # else:
     #     plt.show()
     # NOT WORKING WITH STREAMLIT 1.9.0! For now and here, just do it manually:
+    import streamlit as st
     st.pyplot(fig)
 
     # the function returns all the calculated field line objects, which include many attributes
